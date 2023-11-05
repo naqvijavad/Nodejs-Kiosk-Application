@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/head'); -%>
+    <body>
+        <!-- Responsive navbar-->
+       <!-- Navigation-->
+       <%- include('layouts/navbar'); -%>
+       <header
+      class="masthead"
+      style="background-image: url('assets/img/about-bg.jpg')"
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="site-heading">
+              <h1>G2 Test Appointement Booking</h1>
+              <span class="subheading">G2 DriveTest Booking Kiosk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- <form method="POST" action="/G2_licensefind"> -->
+    <!-- Content section-->
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+             <h6>1 Discount will be applied before applicable taxes, eco fees and additional fees (where applicable) at the time of purchase. Not valid in conjunction with any other offer, coupon or discount. Some vehicle restrictions may apply. See in store for details. Offer valid March 23-April 27, 2023.
+
+              2 $10 discount applies when tires are already on rims and no re-installation of tires is required. Balancing is not included.
+              
+              3 $20 discount applies when re-installation of tires onto rims is required. Fees may apply for vehicles with TPMS sensors.
+              
+              4 Mounting tires onto rims and balancing is not included.
+              
+              5 Standard Message & Data rates may apply. You can withdraw your consent to receive text messages about Canadian Tire Auto offers and Tips at any time by texting STOP to 51922. Contact us at P.O. Box 2000, Welland, Ontario L3B 5S3 or 1-800-387-8803 or customerservice@canadiantire.ca.
+              
+              6 You will receive electronic messages on offers and tips that may be of interest to you from Canadian Tire Corporation, Limited. You may unsubscribe at any time.</h6>
+              <div class="my-5">
+                    <form method="POST" action="/create">
+
+                        <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="dob"
+                    type="date" value='<%= dateSelected %>' name="date"
+                  />
+                  <label for="date">Date of Appointment</label>
+                   <span
+                    id="dobError"
+                    class="error-text py-2 px-3 text-xs italic"
+                  ></span>
+                </div><br>
+       
+                   <div class="size">
+                   <select class="timeAppointment field" name="time" id="time">
+                        <%
+                            displayTime.forEach(element => {
+                        %>
+                           <option value="<%=element %>"><%=element %></option>
+                       <%
+                           });
+                       %>
+                      
+                   </select>
+                   
+                   </div ><br>
+                    
+                    
+                   <input type="submit" class="mv" name="submit" value="Add">
+                   <p style="font-weight: bold; color: rgb(9, 138, 0);"><%= lisenceinfo %></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </form>
+</div>
+</div>
+</div>
+</div>
+    </main>
+    <!-- Image element - set the background image for the header in the line below-->
+    <!-- <div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800')"> -->
+        <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+        <div style="height: 20rem"></div>
+    </div>
+    <!-- Content section-->
+    <%- include('layouts/footer'); -%>
+
+     <!-- Scripts-->
+     <%- include('layouts/scripts'); -%>
+</html>

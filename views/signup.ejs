@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('layouts/head'); -%>
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <body>
+        <!-- Navigation-->
+        <%- include ('layouts/navbar'); -%>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/login.jpg')">
+        </header>
+        <!-- Main Content-->
+        <main>
+          <!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+    <style>
+     
+  .row {
+    margin-left: 10%;
+  }
+  
+  
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(196, 78%, 73%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Sign Up</h2>
+              <form action="/signupInfo" method="post" >
+                
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="text" name="username" class="form-control" />
+                  <label class="form-label" for="username">Username</label>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" name="password" class="form-control" />
+                  <label class="form-label" for="password">Password</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="password" name="repassword" class="form-control" />
+                    <label class="form-label" for="repassword">Re-type Password</label>
+                  </div>
+
+                <!-- Checkbox -->
+                <!-- <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div> -->
+                 
+                <select name="usertype" id="usertype">
+       
+                    <option value="driver">Driver</option>
+                  <option value="examiner">Examiner</option>
+                  <option value="admin">Admin</option>
+                  
+                </select>
+                <br><br>       
+                <div>
+                  <% if (showMsgError) { %>
+                    <p style="color: rgb(209, 15, 15); text-align: center;">Passwords don't match!</p>
+                   <% } %>
+                  </div>             
+                <!-- Submit button -->
+                <input type="submit"  name="login_form" id="login_form" class="btn btn-light btn-lg">
+                <!-- <button type="submit" class="btn btn-primary btn-block mb-4"> -->
+                  <!-- Sign Up -->
+                <!-- </button> -->
+              </div>
+            </div>
+            
+    
+            <div>
+              <div>
+                
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p></p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+        </main>
+        <!-- Footer-->
+        <%- include ('layouts/footer'); -%>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <%- include ('layouts/scripts'); -%>
+    </body>
+</html>

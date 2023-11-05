@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/head'); -%>
+  <body>
+    <!-- Navigation-->
+    <%- include('layouts/navbar'); -%>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+      style="background-image: url('/public/assets/img/post-bg.jpg')"
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="page-heading">
+              <h1>G Test</h1>
+              <!-- <span class="subheading">Have questions? I have answers.</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content-->
+    <main class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <p>
+              
+The G driving exam includes everything from the G2 exam, but also tests you on more advanced driving skills- mainly, driving on highways. They last around 30 minutes and new drivers will need to have their G2 for at least 8-12 months before they can take the G road test.
+            </p>
+            <div class="my-5">
+            
+              <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/search">
+                
+
+                
+                </div>
+
+                <!-- Submit error message-->
+                <!---->
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <div class="d-none" id="submitErrorMessage">
+                  <div class="text-center text-danger mb-3">
+                    Error sending message!
+                  </div>
+                </div>
+              </br>
+                <!-- Submit Button-->
+                <!-- <button
+                  class="btn btn-primary text-uppercase"
+                  id="submitButton"
+                  type="submit"
+                >
+                  Submit
+                </button>
+                <label style="color: red; font-weight: bold;"> <%=user.error %></label> -->
+              </form>
+                  <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="my-5">
+                      <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/update">
+                        <h3 class="post-subtitle">Personal Information</h3>
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="firstName"
+                            name="firstName"
+                            type="text"
+                            disabled value='<%= user.firstName %>'
+                          
+                          />
+                          <label for="firstName">First name</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            A firstname is required.
+                          </div> -->
+                        </div>
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="lastName"
+                            name="lastName"
+                            type="text"
+                            disabled value='<%= user.lastName %>'
+                      
+                          />
+                          <label for="lastName">Last name</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            A lastname is required.
+                          </div> -->
+                        </div>
+            
+          
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="age"
+                            name="age"
+                            type="number"
+                            disabled value='<%= user.age %>'
+                            
+                          />
+                          <label for="age">Age</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            Age is required.
+                          </div> -->
+                        </div>
+                        <!-- <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="dob"
+                            type="date"
+                            disabled value='<%= user.dob %>'
+                            
+                          />
+                          <label for="dob">Date of Birth</label>
+                          <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            DOB is required.
+                          </div>
+                        </div> -->
+                        <br />
+                        <br />
+                        <h3 class="post-subtitle">Car Information</h3>
+        
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="licenseNumber"
+                            type="text"
+                            name="licenseNumber"
+                            maxlength="8"
+                            hidden value='<%= user.licenseNumber %>'
+                          
+                          />
+                          <label for="licenseNumber">License number</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            A License number is required.
+                          </div> -->
+                        </div>
+        
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="carMake"
+                            type="text"
+                            name="carMake"
+                            value='<%= user.carDetails.carMake %>'
+                            
+                          />
+                          <label for="carMake">Car make</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            A Car make is required.
+                          </div> -->
+                        </div>
+        
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="carModel"
+                            name="carModel"
+                            type="text"
+                            value='<%= user.carDetails.carModel %>'
+                            
+                          />
+                          <label for="carModel">Car model</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            A Car model is required.
+                          </div> -->
+                        </div>
+        
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="year"
+                            type="text"
+                            name="year"
+                            value='<%= user.carDetails.year %>'
+                            
+                          />
+                          <label for="year">Year</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            A year is required.
+                          </div> -->
+                        </div>
+                        <div class="form-floating">
+                          <input
+                            class="form-control"
+                            id="plateNumber"
+                            type="text"
+                            value='<%= user.carDetails.plateNumber %>'
+                            name="plateNumber"
+                            
+                          />
+                          <label for="plateNumber">Plate Number</label>
+                          <!-- <div
+                            class="invalid-feedback"
+                            data-sb-feedback="name:required"
+                          >
+                            A plate number is required.
+                          </div> -->
+                        </div>
+        
+                      </br>
+                     
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <!-- <div class="d-none" id="submitErrorMessage">
+                          <div class="text-center text-danger mb-3">
+                            Error sending message!
+                          </div>
+                        </div> -->
+                        <!-- Submit Button-->
+                        <button
+                          class="btn btn-primary text-uppercase"
+                          id="updateButton"
+                          type="submit"
+                        >
+                          Submit request
+                        </button>
+                      </form>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer-->
+    <!-- Footer-->
+    <%- include('layouts/footer'); -%>
+    <!-- Scripts-->
+    <%- include('layouts/scripts'); -%>
+  </body>
+</html>

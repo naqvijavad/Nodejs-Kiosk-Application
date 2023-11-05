@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/head'); -%>
+  <style>
+    .error{
+      color: red;
+    }
+  </style>
+  <body>
+    <!-- Navigation-->
+    <%- include('layouts/navbar'); -%>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+     
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="page-heading">
+              <h1>G2 Test</h1>
+              <!-- <span class="subheading">This is what I do.</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content-->
+    <main class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <p>
+            
+Passing the Level Two (G2) road test gives you full Class G driving privileges. While the Level One road test deals with basic driving skills, the Level Two deals with advanced knowledge and skills that are generally gained with driving experience.
+            </p>
+            <section class="py-5">
+            
+              
+            <div class="my-5">
+              <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="/post/data" method="post" onsubmit="validate(event)">
+                <h3 class="post-subtitle">Personal Information</h3>
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="firstName"
+                    type="text"
+                    name="firstName"
+                    placeholder="Enter your firstName..."
+                    
+                  />
+                  <label for="firstName">First name</label>
+                  <span class="spa" id="firstNameError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A firstname is required.
+                  </div> -->
+                </div>
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Enter your lastName..."
+                  
+                  />
+                  <label for="lastName">Last name</label>
+                  <span class="spa" id="lastNameError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A lastname is required.
+                  </div> -->
+                </div>
+                <!-- <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email..."
+            
+                  />
+                  <label for="email">Email address</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="email:required"
+                  >
+                    An email is required.
+                  </div> 
+                   <div class="invalid-feedback" data-sb-feedback="email:email">
+                    Email is not valid.
+                  </div>
+                </div> -->
+                <!-- <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="phone"
+                    type="tel"
+                    placeholder="Enter your phone number..."
+                  />
+                  <label for="phone">Phone Number</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="phone:required"
+                  >
+                    A phone number is required.
+                  </div>
+                </div> -->
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="age"
+                    type="number"
+                    name="age"
+                    placeholder="Enter your age..."
+                    
+                  
+                  />
+                  <label for="age">Age</label>
+                  <span class="spa" id="ageError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    Age is required.
+                  </div> -->
+                </div>
+                <!-- <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="dob"
+                    type="date"
+                    placeholder="Enter your dob..."
+                   
+                  />
+                  <label for="dob">Date of Birth</label> -->
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    DOB is required.
+                  </div> -->
+                <!-- </div> -->
+                <br />
+                <br />
+                <h3 class="post-subtitle">Car Information</h3>
+
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="licenseNumber"
+                    name="licenseNumber"
+                    type="text"
+                    maxlength="8"
+                    placeholder="Enter your License number..."
+                 
+                    
+                  />
+                  <label for="licenseNumber">License number</label>
+                  <span class="spa" id="licenseNumberError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A License number is required.
+                  </div> -->
+                </div>
+
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="carMake"
+                    name="carMake"
+                    type="text"
+                    placeholder="Enter your car make..."
+                    
+                  
+                  />
+                  <label for="carMake">Car make</label>
+                  <span class="spa" id="carMakeError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A Car make is required.
+                  </div> -->
+                </div>
+
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="carModel"
+                    type="text"
+                    name="carModel"
+                    placeholder="Enter your car model..."
+                 
+                    
+                  />
+                  <label for="carModel">Car model</label>
+                  <span class="spa" id="carModelError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A Car model is required.
+                  </div> -->
+                </div>
+
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="year"
+                    name="year"
+                    type="text"
+                    placeholder="Enter your car model year..."
+                 
+                    
+                  />
+                  <label for="year">Year</label>
+                  <span class="spa" id="yearError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A year is required.
+                  </div> -->
+                </div>
+                <div class="form-floating">
+                  <input
+                    class="form-control"
+                    id="plateNumber"
+                    name="plateNumber"
+                    type="text"
+                    placeholder="Enter your car plate number..."
+                
+                   
+                  />
+                  <label for="plateNumber">Plate Number</label>
+                  <span class="spa" id="plateNumberError"></span>
+                  <!-- <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A plate number is required.
+                  </div> -->
+                </div>
+
+              </br>
+             
+                <!-- Submit Button-->
+                <button
+                  class="btn btn-primary text-uppercase"
+                  id="submitButton"
+                  type="submit" 
+                  name="Submit"
+                >
+                  Submit request
+                </button>
+                <hr>
+                <h1>
+                  Book Appointment
+                </h1>
+                <div class="container my-5" style="background-color: white;max-width: 100%;">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-6">
+                         <div class="size">
+                          <form method="post" action="/verifyAppoinment">
+                               <label for="date">Date:</label>
+                                  <input type="date" id="date"  value='<%= dateSelected || "No date found" %>' name="date">&nbsp;
+                                  <input type="submit" class="field1" name="submit" id="submit" value="Check"/>
+                          </div><br>
+                      </form>
+                      <form method="post" action="/bookAppointment">
+                      <div class="size">
+                          <input type="date" id="date" hidden value='<%= dateSelected || "No date found"%>' name="date">&nbsp;
+                      <select class="timeAppointment field" name="time" id="time">
+                          <option value="0">--Select--</option>
+                         
+                           <%
+                               displayTime.forEach(element => {
+                           %>
+                              <option value="<%=element %>"><%=element %></option>
+                          <%
+                              });
+                          %>
+                         
+                      </select>
+                      
+                      </div ><br>
+                      <input type="submit" class="field1" name="submit" id="submit" value="Book"/>
+          <p style="color: red;"><%= lisenceinfo %></p>
+      </div>
+  </div>
+</form>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer-->
+    <%- include('layouts/footer'); -%>
+    <!-- Scripts-->
+    <%- include('layouts/scripts'); -%>
+  </body>
+</html>
